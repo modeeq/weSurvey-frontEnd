@@ -1,0 +1,223 @@
+.mySurveys {
+    justify-content: center;
+    display: grid;
+    grid-template-rows: 50px auto;
+    grid-template-columns: 100%;
+    grid-template-areas: "surveyNav" "surveys";
+}
+
+.survey-nav {
+    grid-area: surveyNav;
+    margin-top: 1px;
+    border-bottom: 1px solid #efe9e9;
+    display: grid;
+    grid-template-columns: 10% 25% 40% 20% 5%;
+    grid-template-rows: 100%;
+    grid-template-areas: ". title searchBox sort    ."
+}
+
+.survey-nav p {
+    grid-area: title;
+    height: 70%;
+    margin: 0;
+    padding-top: 15px;
+    /* margin: auto; */
+    font-weight: 500;
+    font-size: 20px;
+}
+
+.searchBox {
+    grid-area: searchBox;
+}
+
+.searchBox input {
+    width: 55%;
+    height: 25px;
+    margin-top: 8px;
+    border: none;
+    border-radius: 20px 0px 0px 20px;
+    font-size: 15px;
+    padding: 5px;
+    padding-left: 20px;
+    margin-left: -10px;
+    outline: none;
+    background: rgb(199 189 189 / 18%)
+}
+
+.searchBox button {
+    margin: 0px;
+    width: 40px;
+    height: 35px;
+    border-radius: 0 20px 20px 0;
+    color: #5d5b5b;
+    background: rgb(199 189 189 / 18%)
+}
+
+.sort {
+    grid-area: sort;
+    margin-top: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.sort select {
+    border: none;
+    outline: none;
+    text-transform: capitalize;
+    margin-left: 6px;
+}
+
+.surveys {
+    grid-area: surveys;
+    display: flex;
+    flex-flow: wrap;
+    margin: auto;
+    justify-content: center;
+    animation: fadeBigInUp 500ms both;
+}
+
+.survey {
+    width: 450px;
+    height: 200px;
+    display: grid;
+    padding: 10px 0;
+    grid-template-columns: 120px 330px;
+    grid-template-rows: 100%;
+    grid-template-areas: "stats" "info";
+    box-shadow: 1px 1px 3px 2px #00000014;
+    margin: 6px;
+}
+
+.stats {
+    grid-area: stats;
+    animation: flipXIn 1000ms both
+}
+
+.stats p {
+    margin-bottom: -2%;
+    padding: 8px;
+    border-radius: 0 30px 30px 0;
+    color: #5d5b5b;
+    font-weight: bold;
+    font-size: 10px;
+    box-shadow: 0px 5px 2px 0px #dcd6d6;
+}
+
+.stats i {
+    padding-right: 8px;
+}
+
+.info {
+    grid-area: "info";
+    padding: 1px 10px 1px 30px;
+}
+
+.info i {
+    padding-right: 4px;
+}
+
+.info h1 {
+    font-size: 15px;
+    color: #5D5B5B;
+    text-align: center;
+}
+
+.info p {
+    font-size: 11px;
+    color: #5D5B5B;
+    text-align: center;
+    padding-right: 10px;
+}
+
+.info .action {
+    width: 100%;
+    float: right;
+    margin: 3px;
+    text-align: end;
+    margin-right: 9%;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.action span {
+    color: gray;
+    opacity: 50%;
+}
+
+.action a {
+    text-decoration: none;
+    color: red;
+}
+
+.action a:nth-child(1) {
+    color: #1360AD;
+}
+
+.action a:hover {
+    opacity: 70%;
+}
+
+.info button {
+    float: right;
+    width: 101px;
+    height: 31px;
+    margin: 2px 20px;
+}
+
+.empty p {
+    color: #80808059;
+    margin-top: 80%;
+    text-align: center;
+}
+
+@keyframes flipXIn {
+    from {
+        transform: perspective(400px) rotate3d(1, 0, 0, 90deg);
+        animation-timing-function: ease-in;
+        opacity: 0;
+    }
+    40% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -20deg);
+        animation-timing-function: ease-in;
+    }
+    60% {
+        transform: perspective(400px) rotate3d(1, 0, 0, 10deg);
+        opacity: 1;
+    }
+    80% {
+        transform: perspective(400px) rotate3d(1, 0, 0, -5deg);
+    }
+    to {
+        transform: perspective(400px);
+    }
+}
+
+@keyframes fadeBigInUp {
+    from {
+        opacity: 0;
+        transform: translate3d(0, 2000px, 0);
+    }
+    to {
+        opacity: 1;
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@keyframes puffIn {
+    0% {
+        transform: scale3d(2, 2, 2);
+        opacity: 0;
+    }
+    100% {
+        transform: none;
+        opacity: 1;
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .survey-nav {
+        grid-template-columns: 3% 25% 37% 35%;
+        grid-template-rows: 100%;
+        grid-template-areas: ". title searchBox sort"
+    }
+}

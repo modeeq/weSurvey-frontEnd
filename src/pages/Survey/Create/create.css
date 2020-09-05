@@ -1,0 +1,95 @@
+.newSurvey {
+    display: grid;
+    height: 650px;
+    grid-template-rows: 10% 10% 43% 10% 10%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-areas: ". top   ." ". steps   ." ". content   ." ".   u_info   ." ".   action   .";
+}
+
+.u_info {
+    grid-area: u_info;
+    z-index: -1;
+}
+
+.u_info p {
+    color: red;
+    font-size: 12px;
+    letter-spacing: 0.3px;
+    font-weight: 500;
+    text-align: center;
+}
+
+.steps {
+    grid-area: steps;
+    display: flex;
+    margin: auto;
+}
+
+h3 {
+    grid-area: top;
+    text-align: center;
+    color: #5a5766;
+    letter-spacing: 2px;
+    font-family: monospace;
+    font-size: 25px;
+    font-weight: bolder;
+    line-height: 30px;
+}
+
+.content {
+    grid-area: content;
+}
+
+btn-next {
+    display: btn-next;
+}
+
+.action {
+    grid-area: action;
+    margin: auto;
+}
+
+.action i {
+    padding-left: 5px;
+}
+
+.action button:hover i {
+    animation: wobble 500ms both
+}
+
+@keyframes wobble {
+    from {
+        transform: translate3d(0, 0, 0);
+    }
+    15% {
+        transform: translate3d(-25%, 0, 0) rotate3d(0, 0, 1, -5deg);
+    }
+    30% {
+        transform: translate3d(20%, 0, 0) rotate3d(0, 0, 1, 3deg);
+    }
+    45% {
+        transform: translate3d(-15%, 0, 0) rotate3d(0, 0, 1, -3deg);
+    }
+    60% {
+        transform: translate3d(10%, 0, 0) rotate3d(0, 0, 1, 2deg);
+    }
+    75% {
+        transform: translate3d(-5%, 0, 0) rotate3d(0, 0, 1, -1deg);
+    }
+    to {
+        transform: translate3d(0, 0, 0);
+    }
+}
+
+@media only screen and (max-width: 950px) {
+    .newSurvey {
+        grid-template-columns: 100%;
+        grid-template-areas: "top" "steps" "content" "action "
+    }
+    .steps {
+        margin: 1px;
+    }
+    .action {
+        margin-top: 55px;
+    }
+}

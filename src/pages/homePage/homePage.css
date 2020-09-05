@@ -1,0 +1,120 @@
+.homePage {
+    background: url(/img/bc1.png);
+    width: 100%;
+    display: flex;
+    padding-top: 404px;
+    margin-top: -4pc;
+    overflow: hidden;
+}
+
+.h-info {
+    width: 65%;
+    padding: 0 10%;
+}
+
+.h-info h1 {
+    font-weight: bold;
+    font-size: 50px;
+    color: #444445;
+    margin: 0;
+}
+
+.h-info h4 {
+    margin: 10px 0;
+    font-weight: bold;
+    font-size: 16px;
+    color: #9B9B9B;
+}
+
+.h-steps {
+    margin-top: 25px;
+    display: flex;
+    width: 620px;
+    height: 43px;
+    background: #F9F9F9;
+    box-shadow: 0px 1px 8px 0px #dedede;
+    border-radius: 60px;
+}
+
+.h-steps p {
+    margin: 0;
+    padding: 2% 4.4%;
+    border-radius: 60px;
+    color: #B1B1B1;
+    font-size: 70%;
+}
+
+#currentStep {
+    background: white;
+    color: black;
+}
+
+.h-info button {
+    margin: 20px 0;
+    width: 180px;
+    height: 50px;
+    background: white;
+    border: 1.5px solid #3CBE5F;
+    border-radius: 80px;
+    color: #3CBE5F;
+    font-weight: bold;
+}
+
+.h-info button:hover {
+    background: #3CBE5F;
+    color: white;
+}
+
+.h-info i {
+    margin-right: 7px;
+}
+
+.h-img {
+    float: right;
+    bottom: -5px;
+    overflow: hidden;
+}
+
+.h-img img {
+    margin-left: -50px;
+}
+
+@media only screen and (max-width: 1140px) {
+    .homePage {
+        background-position: 0 -100px !important;
+        background-repeat: no-repeat;
+        padding-top: 260px;
+        display: block;
+        overflow: hidden;
+    }
+    .h-info {
+        width: 100%;
+    }
+    .h-info h1 {
+        font-size: 300%;
+    }
+    .h-img {
+        width: 100%;
+        background: #F9F9F9;
+        float: none;
+    }
+    .h-img img {
+        position: relative;
+        left: 10%;
+        width: 700px;
+        margin-left: 0;
+    }
+}
+
+@media only screen and (max-width: 710px) {
+    .h-info {
+        padding: 0 10%;
+    }
+    .h-steps {
+        width: 450px;
+        font-size: 14px;
+    }
+    .h-img img {
+        width: 480px;
+    }
+}

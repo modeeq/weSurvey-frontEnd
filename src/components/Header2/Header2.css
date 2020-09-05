@@ -1,0 +1,120 @@
+ .header2 {
+     display: grid;
+     grid-template-columns: 35% 65%;
+     grid-template-rows: 100%;
+     grid-template-areas: 'name nav';
+     box-shadow: none;
+ }
+ 
+ .header2 h1 {
+     font-size: 20px;
+     grid-area: name;
+     margin: 0;
+     padding-top: 16px;
+     padding-left: 130px;
+ }
+ 
+ .header2 .nav {
+     grid-area: nav;
+     height: 100%;
+     margin: 0;
+     padding: 0;
+ }
+ 
+ .header2 .nav span {
+     float: right;
+     margin-right: 100px;
+     z-index: 130;
+ }
+ 
+ .header2 .nav span button {
+     background: #3CBE5F;
+     color: white;
+     border-radius: 100px;
+     width: 110px;
+     margin: 10px;
+     font-weight: bold;
+ }
+ 
+ .header2 .nav span button:hover {
+     background: green
+ }
+ 
+ .header2 ul {
+     list-style-type: none;
+ }
+ 
+ .header2 .nav li:hover {
+     background: none;
+     color: #2d2d2e;
+     border-top: 3px solid #3CBE5F;
+ }
+ 
+ .header2 #icon {
+     position: absolute;
+     right: 2%;
+     font-size: 25px;
+     top: 27.5%
+ }
+ 
+ .menu {
+     display: none;
+ }
+ 
+ .menu:hover .list {
+     display: block;
+ }
+ 
+ .list {
+     display: none
+ }
+ 
+ .list {
+     display: none;
+     position: absolute;
+     right: 0%;
+     top: 0%;
+     width: 151px;
+     background: #ffffff;
+     box-shadow: 1px 6px 10px 4px #e0d7d77a;
+     border-radius: 9px;
+     padding: 13px;
+     z-index: 99;
+     animation: fadeInDown 100ms both
+ }
+ 
+ .list li {
+     padding: 10px;
+     list-style-type: none;
+ }
+ 
+ .list i {
+     margin-right: 5px;
+ }
+ 
+ .list li:hover {
+     color: black;
+ }
+ 
+ @media only screen and (max-width: 1000px) {
+     #icon {
+         display: block;
+     }
+     .menu {
+         display: block;
+     }
+     .header2 {
+         grid-template-columns: 50% 50%;
+     }
+     .header2 h1 {
+         padding-left: 40px;
+     }
+     .header2 {
+         position: fixed;
+         width: 100%;
+         background: #ffffff;
+         height: 50px;
+         box-shadow: 0px 1px 8px 0px #dedede;
+         z-index: 30;
+     }
+ }

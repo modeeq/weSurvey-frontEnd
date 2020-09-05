@@ -1,0 +1,28 @@
+.duration {
+    color: #707070;
+    padding: 20px;
+    width: 55%;
+    margin: auto;
+    color: #707070;
+}
+
+.duration input {
+    width: 35%;
+    height: 40px;
+    margin-bottom: 5px;
+    margin-left: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px 2px #00000014;
+    font-size: 15px;
+    padding: 5px;
+    color: #707070;
+    outline: none;
+}
+
+@media only screen and (max-width: 950px) {
+    .duration {
+        min-width: 430px;
+    }
+}

@@ -1,0 +1,138 @@
+.preference {
+    position: relative;
+    color: #707070;
+    padding: 20px;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 100%;
+    grid-template-areas: "cal-1 cal-2"
+}
+
+.preference button {
+    margin: 1.3% 31%;
+    background: red;
+}
+
+.cal-1 {
+    grid-area: cal-1;
+    display: block;
+    padding: 5px 20px 17px 70px;
+    text-align: center;
+}
+
+.cal-1 input {
+    top: 30%;
+    width: 72%;
+    height: 13px;
+    margin: 10px auto;
+    font-size: 15px;
+    padding: 10px;
+    border: none;
+    background: #e8e6e64d;
+    border-radius: 90px;
+    padding-left: 20px;
+    margin-bottom: 10px;
+}
+
+.cal-1 input:focus {
+    outline: none;
+    border-bottom: 1px solid rgb(157, 160, 157);
+}
+
+.cal-1 label {
+    display: flex;
+}
+
+.cal-2 {
+    grid-area: cal-2;
+    padding: 17px 58px 17px 0px;
+    border-left: 1px solid rgba(202, 202, 202, 0.295);
+}
+
+.preference h3 {
+    grid-area: top;
+    text-align: center;
+    margin: 11px;
+    color: #5a5766;
+    font-family: monospace;
+    font-size: 16px;
+}
+
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    -webkit-transition: .4s;
+    transition: .4s;
+}
+
+input:checked+.slider {
+    background-color: #2196F3;
+}
+
+input:focus+.slider {
+    box-shadow: 0 0 1px #2196F3;
+}
+
+input:checked+.slider:before {
+    -webkit-transform: translateX(26px);
+    -ms-transform: translateX(26px);
+    transform: translateX(26px);
+}
+
+.slider.round {
+    border-radius: 34px;
+}
+
+.slider.round:before {
+    border-radius: 50%;
+}
+
+@media only screen and (max-width: 950px) {
+    .cal-1 {
+        padding: 10px;
+    }
+    .cal-2 {
+        padding: -10px;
+    }
+    .action {
+        margin-top: 89px;
+    }
+    .preference h3 {
+        margin: 3px;
+        font-size: 15px;
+        font-weight: bold;
+    }
+}

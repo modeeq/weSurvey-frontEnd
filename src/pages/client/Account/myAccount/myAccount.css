@@ -1,0 +1,190 @@
+ .myAccount {
+     position: absolute;
+     left: 20%;
+     top: 50px;
+     color: #444446;
+     padding: 20px 30px;
+ }
+ 
+ .myAccount p {
+     width: 80%;
+     font-size: 20px;
+     font-weight: 600;
+     padding-bottom: 12px;
+     border-bottom: 1px solid #4f50511f;
+     margin-bottom: 1px;
+ }
+ 
+ .myAccount input {
+     top: 30%;
+     width: 100%;
+     height: 20px;
+     margin: 10px auto;
+     box-shadow: -1px 2px 4px 0px #DDDDDD;
+     font-size: 15px;
+     padding: 10px;
+     border: none;
+ }
+ 
+ .myAccount button {
+     float: right;
+     margin: 1% -4%;
+     width: 110px;
+     height: 38px;
+     margin-right: 182px;
+     margin-top: 5px;
+     margin-right: -111px;
+ }
+ 
+ .myAccount a {
+     font-size: 14px;
+ }
+ 
+ .myAccount a:hover {
+     color: black;
+ }
+ 
+ .company {
+     width: 100%;
+     padding: 5px 85px;
+     margin-left: 1%;
+ }
+ 
+ .c-logo img {
+     width: 100px;
+     height: 100px;
+ }
+ 
+ #deleteAccount {
+     color: red;
+     font-weight: bold;
+     position: absolute;
+     bottom: 45px;
+     left: 5%;
+     text-decoration: underline;
+     font-size: 19px;
+     margin-bottom: -10px;
+ }
+ 
+ #deleteAccount:hover {
+     color: rgb(163, 2, 2);
+ }
+ 
+ #warning {
+     position: fixed;
+     bottom: 0;
+     right: 0;
+     padding: 0;
+     background: white;
+     box-shadow: inset -1px 6px 8px 2px #DDDDDD;
+     width: 100%;
+     height: 20vh;
+     text-align: center;
+ }
+ 
+ #warning h1 {
+     font-size: 20px;
+ }
+ 
+ #warning p {
+     font-size: 11px;
+     width: 100%;
+ }
+ 
+ #warning button:nth-of-type(1) {
+     position: fixed;
+     left: 38%;
+     bottom: 10px;
+     margin: 0;
+     padding: 0;
+     padding: 10px;
+     width: 200px;
+     background: red;
+ }
+ 
+ #warning button:nth-of-type(1):hover {
+     background: rgb(184, 3, 3);
+     font-weight: normal;
+ }
+ 
+ #warning button:nth-of-type(2) {
+     position: fixed;
+     left: 53%;
+     padding: 10px;
+     bottom: 10px;
+     margin: 0;
+     padding: 0;
+     background: white;
+     color: black;
+     border: 1px solid black;
+ }
+ 
+ #warning button:nth-of-type(2):hover {
+     font-weight: bold;
+     border: 2px solid black;
+ }
+ 
+ .btn-dis {
+     background: #444446;
+ }
+ 
+ .myAccount #status {
+     position: fixed;
+     right: 0;
+     top: 0;
+     margin: 0;
+     background: white;
+     width: 30%;
+     height: 30px;
+     text-align: center;
+     padding: 10px;
+     color: red;
+     background: white;
+     font-size: 17px;
+     z-index: 100;
+     animation: td 1000ms both
+ }
+ 
+ #invalidPassword {
+     border: 2px solid red;
+ }
+ 
+ .myAccount label span {
+     color: red;
+     font-size: 25px;
+ }
+ 
+ .myAccount button:disabled {
+     background: #a1a1a1;
+     color: white;
+ }
+ 
+ @keyframes td {
+     from {
+         transform: scale3d(1, 1, 1);
+     }
+     10%,
+     20% {
+         transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+     }
+     30%,
+     50%,
+     70%,
+     90% {
+         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+     }
+     40%,
+     60%,
+     80% {
+         transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+     }
+     to {
+         transform: scale3d(1, 1, 1);
+     }
+ }
+ 
+ @media only screen and (max-width: 750px) {
+     .myAccount {
+         left: 0%;
+     }
+ }

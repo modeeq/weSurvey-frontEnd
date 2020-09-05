@@ -1,0 +1,264 @@
+.dashboard {
+    position: absolute;
+    width: 100%;
+    height: 670px;
+    overflow: hidden;
+}
+
+.survey-nv {
+    height: auto;
+    margin: auto;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.survey-nv .item {
+    height: 110px;
+    width: 296px;
+    margin-left: .5%;
+    margin-top: .4%;
+    background: red;
+    animation: fadeIn 1000ms both
+}
+
+.survey-nv .item:nth-of-type(1) {
+    background: #03a9f4
+}
+
+.survey-nv .item:nth-of-type(2) {
+    background: #4caf50
+}
+
+.survey-nv .item:nth-of-type(3) {
+    background: #bb22c0;
+}
+
+.survey-nv .item:nth-of-type(4) {
+    background: #ff9800;
+}
+
+.survey-nv .item .icon {
+    width: 28%;
+    color: #ffffff36;
+    height: 111%;
+    text-align: center;
+    font-size: 76px;
+    float: right;
+    padding-right: 23px;
+}
+
+.dashboard .s-search {
+    width: 51.5%;
+    margin: auto;
+    height: 30px;
+    background: white;
+    margin-left: 152px;
+    margin-right: 81px;
+    float: right;
+    margin-top: 4px;
+}
+
+.dashboard .s-search select {
+    float: right;
+    width: 197px;
+    height: 100%;
+    margin-right: 30px;
+    border: none;
+}
+
+.survey-nv .item p {
+    width: 50%;
+    padding: 5px 0px;
+    float: left;
+    height: 56%;
+    margin: 0;
+    font-size: 37px;
+    color: white;
+    margin-left: 28px;
+}
+
+.main {
+    width: 100%;
+    margin: auto;
+    margin-top: 4px;
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+}
+
+.main .s-status {
+    float: left;
+    height: 600px;
+}
+
+.main .s-status .s-item {
+    width: 430px;
+    height: 168px;
+    background: white;
+    padding: 5px 10px;
+    color: #707070;
+    margin: 4px 0;
+    box-shadow: 1px 0px 4px 0px #d0d0d0;
+}
+
+.main .s-status .s-item h1 {
+    font-size: 50px;
+    text-align: center;
+    color: #1674D3;
+    font-weight: bold;
+}
+
+.main .s-main {
+    width: 762px;
+    float: right;
+}
+
+.s-main-item {
+    width: 747px;
+    box-shadow: -1px 2px 4px 1px #f7f3f3;
+    margin: 5px 10px;
+    background: white;
+    overflow: scroll;
+}
+
+.s-main-item p {
+    font-weight: 400;
+    padding-left: 16px;
+    color: #6e6e6e;
+}
+
+.s-main-item:nth-of-type(1) {
+    overflow: hidden;
+}
+
+.s-main-item:nth-of-type(2) {
+    overflow: scroll;
+    padding-left: 20px;
+    width: 728px;
+    font-weight: lighter;
+    height: 241px;
+}
+
+.s-main-item h1 {
+    font-size: 14px;
+    padding-left: 20px;
+    padding-bottom: 15px;
+    color: #707070;
+}
+
+.s-main-item h2 {
+    font-size: 20px;
+    color: #707070;
+    font-weight: bold;
+}
+
+.s-main-item:nth-of-type(1) {
+    font-family: serif;
+    color: #707070;
+    font-weight: 600;
+}
+
+.s-main-item:nth-of-type(2) p {
+    padding-left: 0px;
+}
+
+.survey-nv .item span {
+    display: block;
+    font-size: 19px;
+    color: #ffffff85;
+}
+
+.dashboard table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.dashboard th {
+    color: #707070;
+    height: 25px;
+}
+
+.dashboard td,
+th {
+    border-bottom: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    color: #707070;
+}
+
+.dashboard .day {
+    margin-bottom: 5px;
+    height: 30px;
+}
+
+.dashboard .day p {
+    width: 16%;
+    float: left;
+    font-size: 15px;
+    padding-left: 29px;
+    margin: 0;
+}
+
+.dashboard .s_bar {
+    width: 80%;
+    background-color: #f7f7f7;
+    float: right;
+}
+
+.dashboard .s_bar_result {
+    width: 75%;
+    background: #1DB5D9;
+    animation: fadeIn 1000ms both
+}
+
+@media only screen and (max-width: 1218px) {
+    .dashboard {
+        height: auto;
+    }
+    .survey-nv .item {
+        width: 48%;
+    }
+    .s-status {
+        width: 97%;
+        display: flex;
+    }
+    .main .s-status .s-item {
+        margin: 5px 4px;
+    }
+    .main .s-status {
+        height: 180px;
+    }
+    .s-main-item {
+        width: 90%;
+    }
+    .s-main-item {
+        width: 97%
+    }
+    .main .s-main {
+        width: 100%;
+    }
+    .s-main-item:nth-of-type(2) {
+        width: 98%;
+        height: auto;
+    }
+}
+
+@media only screen and (max-width: 818px) {
+    .main .s-status .s-item h1 {
+        font-size: 30px;
+    }
+    .survey-nv .item p {
+        font-size: 20px;
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}

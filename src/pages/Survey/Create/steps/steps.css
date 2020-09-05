@@ -1,0 +1,74 @@
+.btn {
+    width: 140px;
+    height: 60px;
+    background: #5A5766;
+    font-size: 13px;
+    box-sizing: border-box;
+    text-align: center;
+    color: white;
+    padding: 16px;
+    font-weight: bold;
+}
+
+.btn img {
+    opacity: 40%;
+}
+
+.btn p {
+    opacity: 40%;
+    margin: 0%;
+}
+
+.btn-active img {
+    opacity: 100%;
+    animation: jump 500ms both
+}
+
+.btn-active p {
+    opacity: 100%;
+}
+
+.btn-back {
+    background: #3CBE5F;
+    color: white;
+    outline: none;
+}
+
+.btn-back img {
+    opacity: 90%;
+}
+
+.btn-back p {
+    opacity: 90%;
+    color: white;
+}
+
+.btn-back:hover {
+    background: rgb(40, 158, 72);
+}
+
+@keyframes jump {
+    from,
+    10% {
+        transform: translateY(0) scale3d(1, 1, 1);
+    }
+    30% {
+        transform: translateY(10%) scale3d(1.05, .8, 1);
+    }
+    50% {
+        transform: translateY(-50%) scale3d(1, 1.1, 1);
+    }
+    65% {
+        transform: translateY(0) scale3d(1, 1, 1);
+    }
+    75% {
+        transform: translateY(8%) scale3d(1.08, .84, 1);
+    }
+    85% {
+        transform: translateY(6%) scale3d(1.05, .88, 1);
+    }
+    90%,
+    to {
+        transform: none;
+    }
+}

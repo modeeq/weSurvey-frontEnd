@@ -1,0 +1,26 @@
+.loading {
+    color: #dedede;
+    text-align: center;
+    margin-top: 100px;
+}
+
+.loading i {
+    font-size: 70px;
+    text-align: center;
+    display: block;
+    animation: rotate180 6000ms infinite both
+}
+
+.loading p {
+    font-size: 20px;
+}
+
+@keyframes rotate180 {
+    0%,
+    100% {
+        transform: rotate(-180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+}

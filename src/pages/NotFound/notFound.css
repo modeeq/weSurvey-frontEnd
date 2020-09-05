@@ -1,0 +1,46 @@
+.notFound {
+    text-align: center;
+}
+
+.notFound h1 {
+    font-size: 140px;
+    color: #f3f3f3;
+    margin-bottom: 0;
+}
+
+.notFound p {
+    color: gray;
+    margin-top: 0;
+    font-size: 16px;
+}
+
+.notFound i {
+    font-size: 180px;
+    margin-bottom: 0;
+    display: block;
+    animation: tada 6000ms infinite both
+}
+
+@keyframes tada {
+    from {
+        transform: scale3d(1, 1, 1);
+    }
+    10%,
+    20% {
+        transform: scale3d(0.9, 0.9, 0.9) rotate3d(0, 0, 1, -3deg);
+    }
+    30%,
+    50%,
+    70%,
+    90% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, 3deg);
+    }
+    40%,
+    60%,
+    80% {
+        transform: scale3d(1.1, 1.1, 1.1) rotate3d(0, 0, 1, -3deg);
+    }
+    to {
+        transform: scale3d(1, 1, 1);
+    }
+}
