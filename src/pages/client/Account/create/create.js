@@ -78,7 +78,7 @@ export default class Create extends React.Component {
 						/>
 						<input
 							type='text'
-							placeholder='username'
+							placeholder='username*'
 							required
 							minlength='5'
 							onChange={this.setUsername}
@@ -86,14 +86,14 @@ export default class Create extends React.Component {
 						/>
 						<input
 							type='email'
-							placeholder='Email'
+							placeholder='Email*'
 							required
 							onChange={this.setEmail}
 							value={this.state.email}
 						/>
 						<input
 							type='password'
-							placeholder='password'
+							placeholder='password*'
 							required
 							pattern='.{5,}'
 							required
@@ -103,7 +103,8 @@ export default class Create extends React.Component {
 						/>
 						<input
 							type='text'
-							placeholder='company name'
+							placeholder='company name*'
+							required
 							onChange={this.setCompany}
 						/>
 						<div className='c-logo'>
