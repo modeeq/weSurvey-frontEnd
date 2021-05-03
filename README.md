@@ -28,7 +28,7 @@ http://wesurvey.net
 
 * Node.js
 * Express
-* Mongoose
+* MongoDB
 
 ## Features
 
