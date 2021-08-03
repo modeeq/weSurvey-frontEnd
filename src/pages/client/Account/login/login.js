@@ -46,7 +46,7 @@ export default class Login extends React.Component {
 					<img src='./img/login.svg' alt='' />
 				</div>
 				<div className='login'>
-					<p id='status'>{this.state.status}</p>
+					<p id='status'>{this.state.status == "" ? <Demo /> : this.state.status}</p>
 					<p>Login</p>
 					<br />
 					<input
@@ -70,4 +70,9 @@ export default class Login extends React.Component {
 			</div>
 		);
 	}
+}
+const Demo = () => {
+	return (
+		<p id='status'>for demo purposes use the following <span style={{ "color": "green", "display": "block" }}>  username: wesurvey password: password1 </span></p>
+	)
 }
